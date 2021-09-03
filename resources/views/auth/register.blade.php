@@ -3,11 +3,11 @@
 @section('content')
 <div class="container mt-5">
     <ul class="nav nav-tabs">
-        <li class="nav-item"><a data-bs-toggle="tab" href="#user" class="nav-link">Client</a></li>
+        <li class="nav-item"><a data-bs-toggle="tab" href="#client" class="nav-link">Client</a></li>
         <li class="nav-item"><a data-bs-toggle="tab" href="#lawyer" class="nav-link">Lawyer</a></li>
     </ul>
     <div class="tab-content">
-        <div class="tab-pane active" id="user">
+        <div class="tab-pane active" id="client">
             <form method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class="mb-3">
@@ -44,7 +44,11 @@
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>
         </div>
-        <div class="tab-pane" id="lawyer">Lawyer</div>
+        <div class="tab-pane" id="lawyer">
+            <form action="POST">
+                Lawyer upcomming
+            </form>
+        </div>
     </div>
 </div>
 
