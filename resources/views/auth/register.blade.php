@@ -4,38 +4,35 @@
 
 <form method="POST" action="{{ route('register') }}">
     @csrf
-
-    <div class="form-group">
-        <label for="name">Name</label>
+    <div class="mb-3">
+        <label for="name" class="form-label">Username</label>
         <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-            aria-describedby="name" placeholder="Name" value="{{ old('name') }}">
+            aria-describedby="name">
         @error('name')
         <span class="invalid-feedback is-invalid" role="alert">{{ $message }}</span>
         @enderror
     </div>
-    <div class="form-group">
-        <label for="email">Email address</label>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
         <input name="email" type="email" class="form-control @error('email') is-invalid @enderror" id="email"
-            aria-describedby="email" placeholder="Enter email" value="{{ old('email') }}">
+            aria-describedby="email">
         @error('email')
         <span class="invalid-feedback is-invalid" role="alert">{{ $message }}</span>
         @enderror
     </div>
-    <div class="form-group">
-        <label for="password">Password</label>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
         <input name="password" type="password" class="form-control @error('password') is-invalid @enderror"
-            id="password" placeholder="Password">
+            id="password">
         @error('password')
         <span class="invalid-feedback is-invalid" role="alert">{{ $message }}</span>
         @enderror
     </div>
-    <div class="form-group">
-        <label for="password_confirmation">Password Confirmation</label>
-        <input name="password_confirmation" type="password" class="form-control" id="password_confirmation"
-            placeholder="Password">
+    <div class="mb-3">
+        <label for="password_confirmation" class="form-label">Confirm Password</label>
+        <input name="password_confirmation" type="password" class="form-control" id="password_confirmation">
     </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Register</button>
 </form>
 
 
