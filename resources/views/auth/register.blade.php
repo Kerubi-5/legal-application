@@ -38,6 +38,9 @@
                     <label for="password_confirmation" class="form-label">Confirm Password</label>
                     <input name="password_confirmation" type="password" class="form-control" id="password_confirmation">
                 </div>
+
+                <input name="individual_type" type="text" value="client" hidden>
+
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>
         </div>
